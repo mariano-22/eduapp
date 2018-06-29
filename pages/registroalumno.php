@@ -205,24 +205,7 @@ include('conexion.php');
                   </div>
                 </div>
               </div>
-              <?php
-                if (isset($_POST["siguiente"]) )
-                {
-                  $cnombre =utf8_decoce($_POST["nombre"]);
-                  $ctelefono = utf8_decoce($_POST["telefono"]);
-                  $cdireccion =utf8_decoce( $_POST["direccion"]);
-                  $cmail = utf8_decoce($_POST["mail"]);
-                  $cpaginaweb = utf8_decoce($_POST["paginaweb"]);
-
-                  mysqli_query($conexion, "INSERT INTO cliente (idCliente, nombre, telefono, direccion, mail, paginaWeb, activo) VALUES ('','$cnombre','$ctelefono','$cdireccion','$cmail','$cpaginaweb', '1')")
-                  OR DIE ("El alta del registro fallo". mysqli_error($conexion));
-
-                  echo "<script language='javascript'>";
-                  echo "alert='ingreso exitoso';";
-                  echo "</script>";
-
-                }
-              ?>
+              
 
             </form>
 
